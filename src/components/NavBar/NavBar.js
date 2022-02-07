@@ -1,44 +1,35 @@
 import React from 'react';
+import logo from '../../assets/logo.png'
+import {CartWidget} from '../CartWidget/CartWidget'
+import './NavBar.css'
 
-function NavBar() {
-    return(
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Electroland</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Celulares</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Smart TV</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Tablets</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Electrodomésticos</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Accesorios
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a className="dropdown-item" href="#">Auriculares</a></li>
-                                <li><a className="dropdown-item" href="#">Cargadores</a></li>
-                                <li><a className="dropdown-item" href="#">Fundas</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    )
+export function NavBar() {
+    return<>
+
+<nav>
+
+<div class="logoYNombre">
+    <a href="../index.html">
+        <img src={logo}/>
+    </a>
+    <a href="../index.html">
+        <h1>Electroland</h1>
+    </a>
+</div>
+
+<div class="categorias">
+    <ul>
+        <a href="#"><li>Celulares</li></a>
+        <a href="#"><li>SmartTV</li></a>
+        <a href="#"><li>Tablets</li></a>
+        <a href="#"><li>Electrodomésticos</li></a>
+        <a href="#"><li>Accesorios</li></a>    
+    </ul>
+</div>
+
+<div class="carrito">
+    <CartWidget/>
+</div>
+</nav>
+    </>
 }
-
-export default NavBar;
