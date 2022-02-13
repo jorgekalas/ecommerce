@@ -1,0 +1,10 @@
+p.pContador{
+    padding: 25px;
+    font-size: 1.5rem;
+}
+
+div.divContador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
