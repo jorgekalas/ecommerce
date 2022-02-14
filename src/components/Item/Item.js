@@ -13,7 +13,7 @@ export const Item=({products})=>{
         {productos.map((p)=>(
 
             <Card style={{ width: '18rem' }} key={p.id}>
-                <Card.Img variant="top" src={p.picture}/>
+                <Card.Img variant="top" src={p.picture} className="imgCard"/>
                 <Card.Body>
                     <Card.Title>{p.title}</Card.Title>
                     <Card.Text>$ 
