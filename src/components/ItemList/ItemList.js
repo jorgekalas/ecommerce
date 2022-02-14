@@ -1,38 +1,38 @@
-// import './ItemList.css'
-// import samsungS21 from '../../assets/samsungS21.jpg'
-// import Card from 'react-bootstrap/Card'
-// import motorolaG60 from '../../assets/motorolaG60.png'
-// import {Item} from '../Item/Item'
-// import {ItemListContainer} from '../ItemListContainer/ItemListContainer'
-// import {useEffect} from 'react'
-// import {useState} from 'react'
-// import NavLink from 'react-bootstrap/NavLink'
+import {useEffect} from 'react'
+import {useState} from 'react'
+import './ItemList.css'
+import {Productos} from '../../data/data'
+import Container from 'react-bootstrap/Container'
+import {Item} from '../Item/Item'
+
+const productos = Productos
+
+export const ItemList = () =>{
+    const [products, setProducts] = useState([])
 
 
+    useEffect(()=>{
+        const promise = obtenerProductos()
+        promise.then(json => {setProducts(json)})
+    }, [products])
 
-// export const ItemList = (props) => {
-//     const[productos, setProductos] = useState(null);
+    const obtenerProductos = () =>{
+        const promise = new Promise((resolve,reject) =>{
+            setTimeout(()=>{
+                resolve(productos)
+            }, 2000)
+        })
+        return promise
+    }
 
-//     useEffect(()=>{
-//         setProductos(props.map((productos)=>({
-//             id: productos.id,
-//             title: productos.title,
-//             price: productos.price,
-//             picture: productos.picture
-//         })))
-//     }, [])
-    
 
-//     return(
-//         props.data.map((productos)=>(
-//             <NavLink to={`../Item/${productos.id}`} className="item-link">
-//                 <Item
-//                     id= {productos.id}
-//                     title= {productos.title}
-//                     price= {productos.price}
-//                     picture= {productos.picture}
-//                     />
-//             </NavLink>
-//         )))
+return (
+    <>
 
-// }
+    <Container className="mt-5 itemListContainer">
+        <Item products={productos}/>
+    </Container>
+
+    </>
+)
+}
