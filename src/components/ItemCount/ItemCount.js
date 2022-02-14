@@ -30,6 +30,7 @@ export const ItemCount = ({stock, initial})=>{
                 <p className="pContador">{count}</p>
                 <Button variant="info" onClick={handleClickIncrease}>+</Button>
             </div>
+            <Button>Agregar al carrito</Button>
         </div>
 
     )

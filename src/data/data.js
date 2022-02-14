@@ -1,10 +1,9 @@
-
 export const Productos = [
 {
     id:1,
     title: "Samsung S21",
     price: 120000,
-    picture: "../assets/samsungS21.jpg"
+    picture: '../assets/samsungS21.jpg'
 
 },
 
@@ -22,6 +21,6 @@ export const Productos = [
     price: 250000,
     picture: "../assets/iphone13.png"
 
-}
+},
 
 ]

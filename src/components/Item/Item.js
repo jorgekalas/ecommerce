@@ -3,7 +3,6 @@ import {ItemCount} from '../ItemCount/ItemCount'
 import Card from 'react-bootstrap/Card'
 import {Productos} from '../../data/data'
 
-
 export const Item=({products})=>{
 
     const productos = Productos
