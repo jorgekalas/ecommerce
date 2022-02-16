@@ -1,5 +1,3 @@
-import {useEffect} from 'react'
-import {useState} from 'react'
 import './ItemList.css'
 import Container from 'react-bootstrap/Container'
 import {Item} from '../Item/Item'
