@@ -11,13 +11,13 @@ export const ItemCount = ({stock, initial})=>{
 
         const handleClickIncrease = () =>{
             if(count < stock){
-            setCount(++count)
+            setCount(count +1)
             }
         }
 
         const handleClickDecrease = () =>{
             if(count >0){
-                setCount(--count)
+                setCount(count -1)
             }
         }
 

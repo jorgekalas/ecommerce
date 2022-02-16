@@ -3,28 +3,24 @@ import {ItemCount} from '../ItemCount/ItemCount'
 import Card from 'react-bootstrap/Card'
 import {Productos} from '../../data/data'
 
-export const Item=({products})=>{
+export const Item=({product})=>{
 
-    const productos = Productos
+    const currentProduct = product  //guardar en un estado
 
     return(
         <>
-        <div className="divItems">
-        {productos.map((p)=>(
 
-            <Card style={{ width: '18rem' }} key={p.id}>
-                <Card.Img variant="top" src={p.picture} className="imgCard"/>
+            <Card style={{ width: '18rem' }} key={currentProduct.id}>
+                <Card.Img variant="top" src={currentProduct.picture} className="imgCard"/>
                 <Card.Body>
-                    <Card.Title>{p.title}</Card.Title>
+                    <Card.Title>{currentProduct.title}</Card.Title>
                     <Card.Text>$ 
-                    {p.price}
+                    {currentProduct.price}
                     </Card.Text>
                     
-                    <ItemCount initial={0} stock={6}/>
+                    <ItemCount initial={0} stock={currentProduct.stock}/>
                 </Card.Body>
             </Card>
-        
-        ))}
-        </div>
+
         </>
     )}
