@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card'
 
 export const Item=({product})=>{
 
+    
     const currentProduct = product  //guardar en un estado
 
     return(
