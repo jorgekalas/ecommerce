@@ -7,12 +7,16 @@ nav {
     padding: 2rem;
 }
 
-nav div.logoYNombre{
+div.logoYNombre{
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-nav div.logoYNombre h1 {
+
+
+nav h1 {
     color: #FFF;
     font-size: 1.5rem;
 }
@@ -21,10 +25,14 @@ nav div.categorias ul{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-
 }
 
-nav div.categorias ul a li{
+
+
+nav div.categorias ul a
+{
     margin-right: 3rem;
     color: #FFF;
+    text-decoration: none;
+    margin-right: 75px;
 }

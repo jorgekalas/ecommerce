@@ -2,28 +2,34 @@ import React from 'react';
 import logo from '../../assets/logo.png'
 import {CartWidget} from '../CartWidget/CartWidget'
 import './NavBar.css'
+import {Link} from 'react-router-dom'
+
 
 export function NavBar() {
+
+
     return<>
 
 <nav>
 
-<div class="logoYNombre">
-    <a href="../index.html">
-        <img src={logo}/>
-    </a>
-    <a href="../index.html">
-        <h1>Electroland</h1>
-    </a>
+<div>
+
+        <Link to={`/`}>
+                <div className="logoYNombre">         
+                    <img src={logo}/>
+                    <h1>Electroland</h1>
+                </div>
+        </Link>
+
 </div>
 
 <div class="categorias">
     <ul>
-        <a href="#"><li>Celulares</li></a>
-        <a href="#"><li>SmartTV</li></a>
-        <a href="#"><li>Tablets</li></a>
-        <a href="#"><li>Electrodomésticos</li></a>
-        <a href="#"><li>Accesorios</li></a>    
+        <Link to={`/category/1`}>Celulares</Link>
+        <Link to={`/category/2`}>SmartTV</Link>
+        <Link to={`/category/3`}>Tablets</Link>
+        <Link to={`/category/4`}>Electrodomésticos</Link>
+        <Link to={`/category/5`}>Accesorios</Link>   
     </ul>
 </div>
 

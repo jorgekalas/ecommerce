@@ -1,3 +1,17 @@
+# Introduction
+
+This project has been made as the final proof of work of the React Coder House's Course, which I've been enrolled to take a preliminary look at this amazing tool, which is a must when we think about the Frontend development skill set.
+
+# Technologies
+
+This project has been made from scratch, by using HTML, CSS, Javascript, React, React-Bootstrap, NodeJS, and GitHub. The main focus is React.
+
+# Launch
+
+There's no hardware requirements to lunch this project. It's only needed a good internet connection and a modern browser, like Google Chrome, Mozilla Firefox, Brave, Edge, and so on.
+Besides, it can be run locally by installing NodeJs and React in your PC.
+
+<!-- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -67,4 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

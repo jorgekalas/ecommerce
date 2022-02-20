@@ -1,6 +1,8 @@
 import './Item.css'
 import {ItemCount} from '../ItemCount/ItemCount'
 import Card from 'react-bootstrap/Card'
+import {Link} from 'react-router-dom'
+
 
 
 export const Item=({product})=>{
@@ -12,7 +14,9 @@ export const Item=({product})=>{
         <>
 
             <Card style={{ width: '18rem' }} key={currentProduct.id}>
-                <Card.Img variant="top" src={currentProduct.picture} className="imgCard"/>
+                <Link to={`/item/${currentProduct.id}`}>
+                    <Card.Img variant="top" src={currentProduct.picture} className="imgCard"/>
+                </Link>
                 <Card.Body>
                     <Card.Title>{currentProduct.title}</Card.Title>
                     <Card.Text>$ 

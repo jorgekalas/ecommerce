@@ -3,24 +3,37 @@ import Container from 'react-bootstrap/Container'
 import {Item} from '../Item/Item'
 
 
+
+
 export const ItemList = ({productsList}) =>{
 
 
-return (
-    <>
+    
+    return (
+        <>
 
-    <Container className="mt-5 itemListContainer">
+{!!productsList.length? 
 
-    { productsList && productsList.map((p) =>{
-        return(
-        <Item product={p}/>
-        )
-    })
-}
 
-    </Container>
+            <Container className="mt-5 itemList">
 
+            { productsList.map((p) =>{
+                return(
+
+                            <Item product={p}/>
+
+                )
+            })
+        }
+            </Container>
+
+
+    :
+
+    <p>Cargando...</p> 
+
+    }
     </>
-)
-}
+)}
+
 
