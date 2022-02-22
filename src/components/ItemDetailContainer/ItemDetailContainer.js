@@ -4,6 +4,7 @@ import {ItemDetail} from '../ItemDetail/ItemDetail'
 import { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container'
 import {useParams} from 'react-router-dom'
+import {Loader} from '../Loader/Loader'
 
 export const ItemDetailContainer = () => {
 
@@ -19,15 +20,14 @@ export const ItemDetailContainer = () => {
 
     const getItems = () =>{
         const promise = new Promise((resolve,reject) =>{
+            const filteredById = Productos.filter(prod=>prod.id==idItem)
             setTimeout(()=>{ // original: resolve(Productos)
-                const filteredById = Productos.filter(prod=>prod.id==idItem)
                 resolve(filteredById)
 
             }, 2000)
         })
 
         return promise
-
     }
     
     
@@ -53,8 +53,10 @@ export const ItemDetailContainer = () => {
                 
             </Container>
             :
-            <p>Cargando...</p> 
-        
+
+            <div className="loader">
+                <Loader type={"balls"} color= {"#0D6EFD"} />
+            </div>
             }
         </div>
         )

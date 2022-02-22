@@ -1,7 +1,7 @@
 import './ItemList.css'
 import Container from 'react-bootstrap/Container'
 import {Item} from '../Item/Item'
-
+import {Loader} from '../Loader/Loader'
 
 
 
@@ -20,7 +20,7 @@ export const ItemList = ({productsList}) =>{
             { productsList.map((p) =>{
                 return(
 
-                            <Item product={p}/>
+                            <Item key={p.id} product={p}/>
 
                 )
             })
@@ -30,7 +30,9 @@ export const ItemList = ({productsList}) =>{
 
     :
 
-    <p>Cargando...</p> 
+    <div className="loader">
+        <Loader type={"balls"} color= {"#0D6EFD"} />
+    </div>
 
     }
     </>

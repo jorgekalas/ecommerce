@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import {ItemList} from '../ItemList/ItemList'
 import {Productos} from '../../data/data'
 import {useParams} from 'react-router-dom'
-
+import {Loader} from '../Loader/Loader'
 
 
 
@@ -38,9 +38,17 @@ return (
         <h1> {title} </h1>
     </div>
 
-    <div className="itemListContainer">
-    <ItemList productsList={products}/>
-    </div>
+
+    {   products?
+        <div className="itemListContainer">
+        <ItemList productsList={products}/>
+        </div>
+
+        :
+        <div className="loader">
+            <Loader type={"balls"} color= {"#0D6EFD"} />
+        </div>
+    }
 
     </>
 )

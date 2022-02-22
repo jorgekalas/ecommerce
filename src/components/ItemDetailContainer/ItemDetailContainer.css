@@ -1,7 +1,6 @@
 .itemDetailContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     gap: 30px;
     display: flex;
     justify-content: center;
@@ -9,7 +8,9 @@
     text-align: center;
 }
 
-p{
-    text-align: center;
-
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11%;
 }

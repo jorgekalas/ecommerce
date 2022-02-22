@@ -43,7 +43,7 @@ export const Productos = [
     id:5,
     title: "Smart TV Noblex 43 pulgadas Full HD",
     price: 65000,
-    picture: "http://medias.musimundo.com/medias/00320415-142255-142255-01-C176742E142255.jpg-size515?context=bWFzdGVyfGltYWdlc3w1ODM4N3xpbWFnZS9qcGVnfGhlYy9oMjAvMTAzMjI4NDQ3MTI5OTAvMDAzMjA0MTUtMTQyMjU1LTE0MjI1NV8wMS1DMTc2NzQyRTE0MjI1NS5qcGdfc2l6ZTUxNXxhNzY1ODVhZWQzMTYyNjk2NzhmNmZjZTlhOTcxNmQ1M2RkMjQwOWM0Yzg1MWVhOWE0YmEzZGQ3NDc1M2U3MzI4",
+    picture: "http://medias.musimundo.com/medias/00307106-139623-139623-01-139623-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1NDAyNHxpbWFnZS9qcGVnfGhiOS9oNGYvMTAzMjQwNDc5MjExODIvMDAzMDcxMDYtMTM5NjIzLTEzOTYyM18wMS0xMzk2MjNfMDEuanBnX3NpemU1MTV8ZDNlYWRmYWViYzdhZjQ5MzliZmVkM2FkMTU3ODU2NjVlZjk2YTg0NmUwYTg4OGFjODEzOTAxMmVjNTZkNGFlNQ",
     stock: 10,
     description: "Televisor Smart 43 pulgadas. FHD 1920x1080. Tasa de refresco 60Hz. Proc. Quad Core. Audio 20W. Salida de audio digital optico. Magic remote.",
     idCategory: 2
@@ -152,21 +152,3 @@ export const Productos = [
 
 ]
 
-
-export const Categorias = [
-    { id: 1,
-    name: 'Celulares'
-    },
-    { id: 2,
-    name: 'SmartTV'
-    },
-    { id: 3,
-    name: 'Tablets'
-    },
-    { id: 4,
-    name: 'Electrodomésticos'
-    },
-    { id: 5,
-    name: 'Accesorios'
-    },
-]
