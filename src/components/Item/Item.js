@@ -7,6 +7,10 @@ import {Link} from 'react-router-dom'
 
 export const Item=({product})=>{
 
+    const formatMoney = (number) => {
+        return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    }
+
     
     const currentProduct = product  //guardar en un estado
 
@@ -19,8 +23,8 @@ export const Item=({product})=>{
                 </Link>
                 <Card.Body>
                     <Card.Title>{currentProduct.title}</Card.Title>
-                    <Card.Text>$ 
-                    {currentProduct.price}
+                    <Card.Text>
+                    {formatMoney(currentProduct.price)}
                     </Card.Text>
                     
                     <ItemCount initial={0} stock={currentProduct.stock}/>

@@ -23,7 +23,7 @@ export const ItemDetail = ({item}) => {
                         <Card.Title>{currentItem.title}</Card.Title>
                         <Card.Text>{currentItem.description}</Card.Text>
                         <Card.Text>$ {currentItem.price}</Card.Text>
-                        <ItemCount initial={0} stock={currentItem.stock}/>
+                        <ItemCount initial={0} stock={currentItem.stock} onAdd={0}/> 
                     </Card.Body>
                 </Card>
 

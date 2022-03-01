@@ -5,12 +5,16 @@ import { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container'
 import {useParams} from 'react-router-dom'
 import {Loader} from '../Loader/Loader'
+import {useCartContext} from '../../context/CartContext'
+
+
 
 export const ItemDetailContainer = () => {
 
     const [itemDetailCont, setItemDetailCont] = useState([])
     
     const {idItem} = useParams ();
+
 
     
     useEffect(()=>{

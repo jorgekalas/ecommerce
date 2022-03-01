@@ -33,7 +33,7 @@ export const Productos = [
     id:4,
     title: "Smart TV BGH 32 pulgadas",
     price: 30000,
-    picture: "https://medias.musimundo.com/medias/00242038-138228-138228-01-138228-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w4NzQ5MHxpbWFnZS9qcGVnfGgxYi9oODEvMTAzMjI3NzUyNDQ4MzAvMDAyNDIwMzgtMTM4MjI4LTEzODIyOF8wMS0xMzgyMjhfMDEuanBnX3NpemU1MTV8OTBjM2Q2ZWE5NmY0M2RmN2U3OWYwY2U2NTYzN2U2MjZmNDEyNzgyMmM2Mjc1NGY3NDRjNTlkYTA1ODE4N2Q5OA",
+    picture: "http://medias.musimundo.com/medias/00242038-138228-138228-01-138228-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w5NTM1MXxpbWFnZS9qcGVnfGhjOC9oMTIvMTAzNTM5MTQyMTY0NzgvMDAyNDIwMzgtMTM4MjI4LTEzODIyOF8wMS0xMzgyMjhfMDEuanBnX3NpemU1MTV8ZGEzODY3ZWZjODIzNTFmN2E1ZGVmNTk5NmJkNzQ4OTNiMjMyOTFjZmFjMDg4NTVhNGUwYjRiYWQ4ZWExNDI4Mw",
     stock: 5,
     description: "TV Smart 32 pulgadas. HD. Resolucion 1366 x 768. Procesador Quad Core. HDMI. WI Fi. USB. Sintonizador TDA",
     idCategory: 2

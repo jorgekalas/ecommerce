@@ -8,3 +8,7 @@ div.itemCountControls{
     justify-content: center;
     align-items: center;
 }
+
+button.terminarCompra{
+    margin-top: 10px;
+}

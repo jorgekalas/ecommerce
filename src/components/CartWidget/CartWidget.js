@@ -1,11 +1,15 @@
 import './CartWidget.css'
+import {ItemCount} from '../ItemCount/ItemCount'
+import {useState} from 'react'
+import React, {useContext} from 'react';
+import {CartContext} from '../../context/CartContext'
 
-export const CartWidget = () =>{
-
+export const CartWidget =  (counter) =>{
+const cartCounter = 0
     return(
         <>
             <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png" alt="carrito"/>
-            <span>0</span>
+            <span>{cartCounter}</span>
         </>
     )
 }

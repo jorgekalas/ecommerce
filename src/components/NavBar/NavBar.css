@@ -14,6 +14,11 @@ div.logoYNombre{
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: none;
+    
+}
+
 
 
 nav h1 {
