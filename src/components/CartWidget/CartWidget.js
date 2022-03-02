@@ -3,13 +3,17 @@ import {ItemCount} from '../ItemCount/ItemCount'
 import {useState} from 'react'
 import React, {useContext} from 'react';
 import {CartContext} from '../../context/CartContext'
+import {useCartContext} from '../../context/CartContext'
 
-export const CartWidget =  (counter) =>{
-const cartCounter = 0
+export const CartWidget =  () =>{
+    
+    const cartQuantity = useCartContext();
+
+
     return(
         <>
             <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png" alt="carrito"/>
-            <span>{cartCounter}</span>
+            <span>cant: {cartQuantity}</span>
         </>
     )
 }

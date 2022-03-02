@@ -8,7 +8,6 @@ import {CartContext} from '../../context/CartContext'
 
 export const NavBar=() => {
 
-const cartCount = useContext(CartContext)
 
 
     return(
@@ -40,7 +39,7 @@ const cartCount = useContext(CartContext)
 
             <div class="carrito">
                 <Link to={"/cart"}>
-                    <CartWidget counter={cartCount}/>
+                    <CartWidget/>
                 </Link>
             </div>
     </nav>
