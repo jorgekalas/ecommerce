@@ -6,9 +6,10 @@ import {useCartContext} from '../../context/CartContext'
 import {Link} from 'react-router-dom'
 
 
-export const ItemCount = ({stock, initial, onAdd})=>{
+export const ItemCount = ({stock, initial, onAdd, itemToAdd})=>{
 
-    const modifyCartQuantity= useCartContext();
+    const {modifyCartQuantity, addItem} = useContext(CartContext);
+
 
     let [count, setCount] = useState(initial);
 
@@ -33,7 +34,9 @@ export const ItemCount = ({stock, initial, onAdd})=>{
         }
         console.log('onAdd', onAdd)
 
-        modifyCartQuantity(onAdd)
+        {modifyCartQuantity(onAdd)}
+
+        {addItem(itemToAdd, onAdd)}
         
     }
 

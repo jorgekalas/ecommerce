@@ -2,7 +2,7 @@ import React, {createContext, useState, useContext} from 'react';
 
 
 //creación del context
-export const CartContext = createContext([]);
+export const CartContext = createContext();
 
 
 //atajo para importar
@@ -17,14 +17,22 @@ export const CartProvider = ({children}) =>{
 
     const [cartItems, setCartItems] = useState([])
     const [cartCount, setCartCount] = useState(0)
-    const [cartQuantity, setCartQuantity] = useState(0)
+
 
     const addItem = (item, amount) =>{
-        if (!isInCart()){
-            setCartCount([...cartCount, amount])
-            setCartItems([...cartItems, item])
+        if (isInCart(item.itemId)){
+                const newCart = [...cartItems]
+                for (const itemCompare of newCart) {
+                    if (itemCompare.item.itemId === item.itemId) {
+                        itemCompare.amount = itemCompare.amount + amount
+                    }
+                }
+                setCartItems(newCart)
+    
+            } else {
+                setCartItems([...cartItems, { item: item, amount: amount }])
+            }
         }
-    }
 
     const modifyCartQuantity=(amount) => {
         setCartCount(amount);
@@ -37,9 +45,9 @@ export const CartProvider = ({children}) =>{
         return total;
       }
 
-    const removeItem = (item) => {
+    const removeItem = (itemId) => {
 
-        let newCart = cartItems.filter(product=> product.id !== item.id)
+        let newCart = cartItems.filter(product=> product.itemId !== itemId)
         setCartItems(newCart)
 
     }
@@ -49,19 +57,8 @@ export const CartProvider = ({children}) =>{
         setCartCount = 0;
     }
 
-    const isInCart = (item, amount)=>{
-
-        if (cartItems.some(product => product.id === item.id)) {
-            let newCart = [...cartItems];
-      
-            let repeated = newCart.find(product => product.id === item.id);
-      
-            repeated.am += amount;
-      
-            setCartItems(newCart);
-          } else {
-            setCartItems([...cartItems, item]);
-          }
+    const isInCart = (itemId)=>{
+        return cartItems.find(product => product.item.itemId === itemId)
 
     }
 
@@ -84,7 +81,17 @@ export const CartProvider = ({children}) =>{
     // }
 
 return(
-    <CartContext.Provider value={{cartCount, cartItems, addItem, removeItem, clear, isInCart, cartCounter, cartQuantity, modifyCartQuantity}}>
+    <CartContext.Provider 
+    value={{
+        cartCount, 
+        cartItems,
+        addItem, 
+        removeItem, 
+        clear, 
+        isInCart, 
+        cartCounter,
+        modifyCartQuantity 
+        }}>
         {children}
     </CartContext.Provider>
 )

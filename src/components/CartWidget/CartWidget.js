@@ -7,13 +7,14 @@ import {useCartContext} from '../../context/CartContext'
 
 export const CartWidget =  () =>{
     
-    const cartCount = useCartContext();
+    const {cartCounter} = useContext(CartContext);
+
 
 
     return(
         <>
             <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png" alt="carrito"/>
-            <span>cant: {cartCount}</span>
+            <span>{cartCounter()}</span>
         </>
     )
 }
