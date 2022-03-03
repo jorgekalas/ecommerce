@@ -34,6 +34,7 @@ export const CartProvider = ({children}) =>{
             }
         }
 
+
     const modifyCartQuantity=(amount) => {
         setCartCount(amount);
     }
