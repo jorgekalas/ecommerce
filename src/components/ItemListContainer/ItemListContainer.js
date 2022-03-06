@@ -39,7 +39,8 @@ return (
     </div>
 
 
-    {   products?
+    {   
+    products?
         <div className="itemListContainer">
         <ItemList productsList={products}/>
         </div>

@@ -54,7 +54,7 @@ export const Productos = [
     title: "Smart TV Samsung 75 pulgadas UHD",
     price: 65000,
     picture: "http://medias.musimundo.com/medias/00454006-144416-144416-01-144416-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1Nzk0MXxpbWFnZS9qcGVnfGgzYi9oNmUvMTAzMjM0MDg4Nzk2NDYvMDA0NTQwMDYtMTQ0NDE2LTE0NDQxNl8wMS0xNDQ0MTZfMDEuanBnX3NpemU1MTV8ZDQ5YTIwYmVlZjZkMTg0MjIyMGM2ZTE3ZTc2NGQxODBhNmMzMzgwNDk5ZjZiN2Y2ODA5OTU2Y2Y2MGJjZGJjZg",
-    stock: 1,
+    stock: 4,
     description: "Televisor Smart de 75 pulgadas. Widescreen. Resolucion 4K QLED. Frecuencia de barrido 60 Hz. Salidas de audio optical / HDMI ARC. Bluetooth. Wi Fi. Sintonizador TDA. 2 Entradas USB. 3 Entradas HDMI.",
     idCategory: 2
 },

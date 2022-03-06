@@ -12,7 +12,8 @@ export const ItemList = ({productsList}) =>{
     return (
         <>
 
-{!!productsList.length? 
+{
+!!productsList.length? 
 
 
             <Container className="mt-5 itemList">

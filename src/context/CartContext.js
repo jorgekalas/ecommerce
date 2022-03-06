@@ -20,10 +20,10 @@ export const CartProvider = ({children}) =>{
 
 
     const addItem = (item, amount) =>{
-        if (isInCart(item.itemId)){
+        if (isInCart(item.id)){
                 const newCart = [...cartItems]
                 for (const itemCompare of newCart) {
-                    if (itemCompare.item.itemId === item.itemId) {
+                    if (itemCompare.item.id === item.id) {
                         itemCompare.amount = itemCompare.amount + amount
                     }
                 }
@@ -41,21 +41,21 @@ export const CartProvider = ({children}) =>{
 
     const cartCounter=() =>{
         let total = 0;
-        cartItems.forEach((product) => (total += product.am));
+        cartItems.forEach((pcount) => (total += pcount.amount));
     
         return total;
       }
 
     const removeItem = (itemId) => {
 
-        let newCart = cartItems.filter(product=> product.itemId !== itemId)
+        let newCart = cartItems.filter(produc=> produc.item.id !== itemId)
         setCartItems(newCart)
 
     }
 
     const clear = () => {
-        setCartItems = []
-        setCartCount = 0;
+        setCartItems([])
+        setCartCount(0);
     }
 
     const isInCart = (itemId)=>{
@@ -63,23 +63,12 @@ export const CartProvider = ({children}) =>{
 
     }
 
-    // const addItem = (item, amount) =>{
-    //     if(cartItems.some(product => product.id === item.id)){
-    //         const copy =  [...cartItems]
-    //         const repeatItemIndex = cartItems.findIndex(product => product.id === item.id )
-    //         copy[repeatItemIndex] = {
-    //             ...copy[repeatItemIndex],
-    //             amount: copy[repeatItemIndex].amount + amount
-    //         }
-            
-    //         setCartItems(copy)
-    //         setCartCount((prev) => prev + amount)
-
-    //     } else {
-    //         setCartItems([...cartItems, { ...item, amount}])
-    //         setCartCount((prev) => prev + amount)
-    //     }
-    // }
+    const precioTotal=() => {
+        let precioTotal = 0;
+        cartItems.forEach((prod) => (precioTotal += prod.item.price * prod.amount));
+    
+        return precioTotal;
+      }
 
 return(
     <CartContext.Provider 
@@ -91,7 +80,8 @@ return(
         clear, 
         isInCart, 
         cartCounter,
-        modifyCartQuantity 
+        modifyCartQuantity ,
+        precioTotal
         }}>
         {children}
     </CartContext.Provider>

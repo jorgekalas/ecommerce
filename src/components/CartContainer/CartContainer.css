@@ -1,0 +1,45 @@
+.imgCartCard{
+    height: 100px;
+    width: 100px;
+}
+
+.precioTotal{
+    padding: 20px;
+    margin: 50px;
+    border: 1px solid #0D6FFD;
+    text-align: center;
+    background-color: #0D6EFD;
+    border-radius: 40px;
+    width: 15%;
+   
+}
+
+.divCartContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.regresar{
+    align-self: center;
+
+}
+
+.carritoVacio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 50vh;
+}
+
+.carritoVacio h2{
+    font-size:50px;
+    padding: 40px;
+}
+
+.carritoVacio button{
+    font-size:22px;
+}
+

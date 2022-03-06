@@ -5,11 +5,12 @@ import { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container'
 import {useParams} from 'react-router-dom'
 import {Loader} from '../Loader/Loader'
-import {useCartContext} from '../../context/CartContext'
+
 
 
 
 export const ItemDetailContainer = () => {
+
 
     const [itemDetailCont, setItemDetailCont] = useState([])
     
@@ -38,7 +39,8 @@ export const ItemDetailContainer = () => {
     return ( 
         <div>
 
-        {!!itemDetailCont.length? 
+        {
+        !!itemDetailCont.length? 
 
         
             <Container className="mt-5 itemDetailContainer">

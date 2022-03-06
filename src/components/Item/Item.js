@@ -2,17 +2,44 @@ import './Item.css'
 import {ItemCount} from '../ItemCount/ItemCount'
 import Card from 'react-bootstrap/Card'
 import {Link} from 'react-router-dom'
-
+import { useState, useEffect } from 'react'
+import {useContext} from 'react'
+import {CartContext} from '../../context/CartContext'
+import Button from 'react-bootstrap/Button'
 
 
 export const Item=({product})=>{
+
+  let item = product
+
 
     const formatMoney = (number) => {
         return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
     }
 
     
-    const currentProduct = product  //guardar en un estado
+    const {addItem} = useContext(CartContext);
+    
+
+
+    let [count, setCount] = useState(0);
+
+    const currentProduct = product 
+
+
+
+    const handleClickIncrease = () =>{
+        if (count < item.stock){
+        setCount(count + 1);
+        }}
+    
+
+    const handleClickDecrease = () =>{
+        if (count > 0){
+
+        setCount(count - 1);
+        }}
+        
 
     return(
         <>
@@ -27,7 +54,14 @@ export const Item=({product})=>{
                     {formatMoney(currentProduct.price)}
                     </Card.Text>
                     
-                    <ItemCount initial={0} stock={currentProduct.stock}/>
+                    <ItemCount 
+                        count= {count}
+                        sub = {handleClickDecrease}
+                        add = {handleClickIncrease}
+                        /> 
+
+                    <Button onClick={() => addItem(item, count)}>Agregar al carrito</Button>
+
                 </Card.Body>
             </Card>
 
