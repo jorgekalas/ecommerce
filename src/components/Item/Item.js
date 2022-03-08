@@ -18,7 +18,7 @@ export const Item=({product})=>{
     }
 
     
-    const {addItem} = useContext(CartContext);
+    const {addItem, cartItems} = useContext(CartContext);
     
 
 
@@ -53,15 +53,12 @@ export const Item=({product})=>{
                     <Card.Text>
                     {formatMoney(currentProduct.price)}
                     </Card.Text>
-                    
-                    <ItemCount 
-                        count= {count}
-                        sub = {handleClickDecrease}
-                        add = {handleClickIncrease}
-                        /> 
-
-                    <Button onClick={() => addItem(item, count)}>Agregar al carrito</Button>
-
+                            <ItemCount 
+                                count= {count}
+                                sub = {handleClickDecrease}
+                                add = {handleClickIncrease}
+                                /> 
+                            <Button onClick={() => addItem(item, count)}>Agregar al carrito</Button>
                 </Card.Body>
             </Card>
 
