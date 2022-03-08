@@ -18,7 +18,7 @@ export const Item=({product})=>{
     }
 
     
-    const {addItem, cartItems} = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
     
 
 

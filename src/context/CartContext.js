@@ -20,6 +20,7 @@ export const CartProvider = ({children}) =>{
 
 
     const addItem = (item, amount) =>{
+    
         if (isInCart(item.id)){
                 const newCart = [...cartItems]
                 for (const itemCompare of newCart) {
@@ -48,7 +49,7 @@ export const CartProvider = ({children}) =>{
 
     const removeItem = (itemId) => {
 
-        let newCart = cartItems.filter(produc=> produc.item.id !== itemId)
+        let newCart = cartItems.filter(produc=> produc.item.itemId !== itemId)
         setCartItems(newCart)
 
     }
@@ -59,7 +60,7 @@ export const CartProvider = ({children}) =>{
     }
 
     const isInCart = (itemId)=>{
-        return cartItems.find(product => product.item.itemId === itemId)
+        return cartItems.find(product => product.item.id === itemId)
 
     }
 
