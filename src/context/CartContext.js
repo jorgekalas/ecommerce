@@ -49,7 +49,7 @@ export const CartProvider = ({children}) =>{
 
     const removeItem = (itemId) => {
 
-        let newCart = cartItems.filter(produc=> produc.item.itemId !== itemId)
+        let newCart = cartItems.filter(produc=> produc.item.id !== itemId)
         setCartItems(newCart)
 
     }
