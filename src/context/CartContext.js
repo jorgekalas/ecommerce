@@ -1,3 +1,4 @@
+import { Timestamp } from 'firebase/firestore';
 import React, {createContext, useState, useContext} from 'react';
 
 
@@ -71,6 +72,9 @@ export const CartProvider = ({children}) =>{
         return precioTotal;
       }
 
+
+
+
 return(
     <CartContext.Provider 
     value={{
@@ -82,7 +86,7 @@ return(
         isInCart, 
         cartCounter,
         modifyCartQuantity ,
-        precioTotal
+        precioTotal,
         }}>
         {children}
     </CartContext.Provider>

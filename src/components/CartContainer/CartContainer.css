@@ -3,23 +3,23 @@
     width: 100px;
 }
 
-.precioTotal{
+.divPrecioTotal{
     padding: 20px;
-    margin: 50px;
+    margin: 100px;
     border: 1px solid #0D6FFD;
     text-align: center;
     background-color: #0D6EFD;
     border-radius: 40px;
-    width: 15%;
-   
 }
+
+
+
 
 .divCartContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh;
 }
 
 .regresar{
@@ -43,3 +43,11 @@
     font-size:22px;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container a{
+    align-self: center;
+}
