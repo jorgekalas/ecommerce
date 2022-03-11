@@ -32,7 +32,7 @@ export const Productos = [
 {
     id:4,
     title: "Smart TV BGH 32 pulgadas",
-    price: 30000,
+    price: 42000,
     picture: "http://medias.musimundo.com/medias/00242038-138228-138228-01-138228-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w5NTM1MXxpbWFnZS9qcGVnfGhjOC9oMTIvMTAzNTM5MTQyMTY0NzgvMDAyNDIwMzgtMTM4MjI4LTEzODIyOF8wMS0xMzgyMjhfMDEuanBnX3NpemU1MTV8ZGEzODY3ZWZjODIzNTFmN2E1ZGVmNTk5NmJkNzQ4OTNiMjMyOTFjZmFjMDg4NTVhNGUwYjRiYWQ4ZWExNDI4Mw",
     stock: 5,
     description: "TV Smart 32 pulgadas. HD. Resolucion 1366 x 768. Procesador Quad Core. HDMI. WI Fi. USB. Sintonizador TDA",
@@ -85,7 +85,7 @@ export const Productos = [
     price: 16000,
     picture: "http://medias.musimundo.com/medias/00454008-144599-144599-01-144599-01.jpg-size515?context=bWFzdGVyfGltYWdlc3wzOTY2NHxpbWFnZS9qcGVnfGg2Ni9oZjcvMTAzMTU1ODY3NjQ4MzAvMDA0NTQwMDgtMTQ0NTk5LTE0NDU5OV8wMS0xNDQ1OTlfMDEuanBnX3NpemU1MTV8MjQxZTQyYzQ1MTMxZmE0NDJjMmM2NzBmN2MzZGMyMTUyZDhlZDU3OWNlZjU2ZjJhNWVlYTU2NDI5NzRhZjk0ZA",
     stock: 8,
-    description: "Tablet de 10.1 Aspecto: 16:9. Resolucion: 800 x 1280px. Tipo de pantalla: IPS. Procesador RK3326 Cortex-A35 Quad-Core 1.5GHz. Capacidad 16Gb / RAM 2Gb. Micro USB. Bluetooth 4.0. Lector de tarjetas (expandible hasta 64 Gb)..",
+    description: "Tablet de 10.1 Aspecto: 16:9. Resolucion: 800 x 1280px. Tipo de pantalla: IPS. Procesador RK3326 Cortex-A35 Quad-Core 1.5GHz. Capacidad 16Gb / RAM 2Gb. Micro USB. Bluetooth 4.0. Lector de tarjetas (expandible hasta 64 Gb)",
     idCategory: 3
 },
 
@@ -95,7 +95,7 @@ export const Productos = [
     price: 75000,
     picture: "http://medias.musimundo.com/medias/00198078-136144-136144-01-136144-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w5MzM1OHxpbWFnZS9qcGVnfGgyYi9oMTMvMTAzMDQzMDgzNDY5MTAvMDAxOTgwNzgtMTM2MTQ0LTEzNjE0NF8wMS0xMzYxNDRfMDEuanBnX3NpemU1MTV8M2Y1OTQ5ZmE0NDQ4OTFjMDA3NDUwNzE5MWFiNzAyOWIzOWU1ZTBjOTI1MmU1NDA3MTg2Y2NhODM5ZjhiZGVkMg",
     stock: 10,
-    description: "EE A++. Puerta Extra grande, apertura 180 sin palanca. Bisagra reforzada. 1000 rpm. Capacidad de 7kg, con carga autoadaptativa. Sist. autobalance. Antiarrugas. Lavado Rapido. Efecto SOFT. Eco Wash. Control de temperatura. ",
+    description: "EE A++. Puerta Extra grande, apertura 180 sin palanca. Bisagra reforzada. 1000 rpm. Capacidad de 7kg, con carga autoadaptativa. Sist. autobalance. Antiarrugas. Lavado Rapido. Efecto SOFT. Eco Wash. Control de temperatura.",
     idCategory: 4
 },
 

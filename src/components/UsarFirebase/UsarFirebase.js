@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import {db} from '../../utils/firebase'
 
 
-export const UsoFirestore = () => {
+export const UsarFirebase = () => {
     useEffect(()=>{
     const getData = async() =>{
         const query = collection(db, 'items');
@@ -14,7 +14,4 @@ export const UsoFirestore = () => {
     getData();
 }, [])
 
-    return(
-        <p>Cart Container</p>
-    )
 }
