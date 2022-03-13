@@ -52,7 +52,7 @@ export const ItemDetail = ({item}) => {
                         <Card.Text>{currentItem.description}</Card.Text>
                         <Card.Text style={{fontWeight: 'bold', fontSize: '20px'}}>{formatMoney(currentItem.price)}</Card.Text>
                         
-                        {!cartItems.length>0?(
+                        {!!cartItems.length>0?(
                         <div>
                         
                         <ItemCount 

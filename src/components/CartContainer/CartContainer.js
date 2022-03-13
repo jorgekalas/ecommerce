@@ -136,7 +136,7 @@ return(
                               <Button type="submit">Enviar</Button>
                               <br></br>
                               <Link to={'/success'}>
-                                <Button style={{'AlignSelf':'center'}} variant="success" onClick={clear}>Finalizar</Button>
+                                <Button style={{'AlignSelf':'center'}} variant="success" onClick={clear} >Finalizar</Button>
                               </Link>   
                         </Form>
                       </Container>
