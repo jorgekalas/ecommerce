@@ -1,11 +1,11 @@
 import './ItemDetailContainer.css'
-import {Productos} from '../../data/data'
+// import {Productos} from '../../data/data'
 import {ItemDetail} from '../ItemDetail/ItemDetail'
 import { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container'
 import {useParams} from 'react-router-dom'
 import {Loader} from '../Loader/Loader'
-import {collection, query, where, getDocs, doc, getDoc} from "firebase/firestore";
+import {collection, getDocs, doc, getDoc} from "firebase/firestore";
 import {db} from '../../utils/firebase'
 
 
@@ -16,46 +16,34 @@ export const ItemDetailContainer = () => {
 
     const [itemDetailCont, setItemDetailCont ] = useState([])
 
-
     const {idItem} = useParams ();
-
-
 
     useEffect(()=>{
 
         const getData = async() =>{
             const query = collection(db, 'items');
             const response = await getDocs(query);
-            const data = response.docs.map(doc=>{return {id:doc.id, ...doc.data()}});
-            setItemDetailCont(data)
+            const dataItems = response.docs.map(doc=>{return {idItem: doc.id, ...doc.data()}});
+            // const data = response.docs.map(doc=>doc.data())
 
 
-        // const q = query(collection(db, 'items') .where("id", "===", idItem)); //ver idItem
-        // const querySnapshot =  getDocs(q);
-        // querySnapshot.forEach((doc)=>{
-        //     setItemDetailCont(doc.id)
-        // })
+
+            console.log('dataItems', dataItems)
+
+            const queryDoc = doc(db, "items", idItem)
+            const responseDoc = await getDoc(queryDoc)
+            const dataDoc = responseDoc.data()
+
+            const filteredById = dataItems.filter(prod=>prod.idItem==idItem)
+            setItemDetailCont (filteredById)
 
 
+            console.log('id', responseDoc.id)
+            console.log('dataDoc', dataDoc)
 
         }
         getData();
-    }, [itemDetailCont, idItem])
-
-
-
-        // const q = query(collection(db, 'items'), where("id", "==", idItem)); //ver idItem
-        // const querySnapshot =  getDocs(q);
-        // querySnapshot.forEach((doc)=>{
-        //     return(doc.id)
-        //     // console.log(doc.id, "=>", doc.data())
-        // })
-
-
-
-    // const [itemDetailCont, setItemDetailCont] = useState([])
-    
-    // const {idItem} = useParams ();
+    }, [])
 
 
     

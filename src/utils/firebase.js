@@ -2,13 +2,27 @@ import {initializeApp} from 'firebase/app'
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCbY1IoFB1cBPmTGQ2blZGBk9b1LEor3Bc",
-    authDomain: "coderhouse-ecommerce-2d923.firebaseapp.com",
-    projectId: "coderhouse-ecommerce-2d923",
-    storageBucket: "coderhouse-ecommerce-2d923.appspot.com",
-    messagingSenderId: "698380749502",
-    appId: "1:698380749502:web:726e704d869d5b5fcfecef"
+
+  //bd completa
+    // apiKey: "AIzaSyCbY1IoFB1cBPmTGQ2blZGBk9b1LEor3Bc",
+    // authDomain: "coderhouse-ecommerce-2d923.firebaseapp.com",
+    // projectId: "coderhouse-ecommerce-2d923",
+    // storageBucket: "coderhouse-ecommerce-2d923.appspot.com",
+    // messagingSenderId: "698380749502",
+    // appId: "1:698380749502:web:726e704d869d5b5fcfecef"
+
+    //bd para test
+
+    apiKey: "AIzaSyDwNeSAoyg6-4Lr-vwh6MTKOjb48LdZVBA",
+    authDomain: "ecommerce---coderhouse-react.firebaseapp.com",
+    projectId: "ecommerce---coderhouse-react",
+    storageBucket: "ecommerce---coderhouse-react.appspot.com",
+    messagingSenderId: "729888681395",
+    appId: "1:729888681395:web:66edd5ed206421fe6dafc6",
+    measurementId: "G-9P5ZQMWL5E"
+
   };
+
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
