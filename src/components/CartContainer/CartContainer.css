@@ -51,3 +51,14 @@
 .container a{
     align-self: center;
 }
+
+.buttons{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items : center;
+}
+
+.buttons Button, .buttons a Button {
+    width: 175px;
+}

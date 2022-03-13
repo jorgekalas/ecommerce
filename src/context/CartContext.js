@@ -1,5 +1,9 @@
-import { Timestamp } from 'firebase/firestore';
+
 import React, {createContext, useState, useContext} from 'react';
+import {Link} from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
+
+
 
 
 //creación del context
@@ -73,6 +77,18 @@ export const CartProvider = ({children}) =>{
       }
 
 
+      const showFinalizar=() => {
+                return(
+                <div>
+                  <Link to={'/success'}>
+                  <Button variant="success" onClick={clear}>Finalizar</Button>
+                </Link> 
+                </div>
+                )
+
+                
+      }
+
 
 
 return(
@@ -87,6 +103,7 @@ return(
         cartCounter,
         modifyCartQuantity ,
         precioTotal,
+        showFinalizar
         }}>
         {children}
     </CartContext.Provider>

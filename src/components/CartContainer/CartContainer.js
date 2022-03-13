@@ -12,13 +12,13 @@ import {Success} from '../Success/Success'
 
 export const CartContainer = () => {
 
-    const {cartItems, removeItem, clear, precioTotal} = useContext(CartContext);
+    const {cartItems, removeItem, clear, precioTotal, showFinalizar} = useContext(CartContext);
 
     const formatMoney = (number) => {
       return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   }
    
-    console.log('cart items', cartItems)
+    console.log('cart items', cartItems.length)
 
     const sendOrder = async (e) => {
       e.preventDefault();
@@ -48,6 +48,8 @@ export const CartContainer = () => {
 
       console.log('Error: ', error)
     }
+
+    clear();
 
   }
 
@@ -109,11 +111,10 @@ return(
 
             </div>
                         )
-                      ;
+                      
               }
               )
 
-              
               
               )}
 
@@ -129,20 +130,24 @@ return(
                         <h4>Completá el formulario para terminar tu pedido</h4>
                         <br></br>
                         <Form className="form" onSubmit={sendOrder}>
-                            <input type="text" placeholder="nombre"/>
-                            <input type="text" placeholder="teléfono"/>
-                            <input type="text" placeholder="email"/>
+                            <input type="text" placeholder="nombre" required />
+                            <input type="text" placeholder="teléfono" required />
+                            <input type="text" placeholder="email" required />
                             <br></br>
+                            <div className="buttons">
+ 
+                              
                               <Button type="submit">Enviar</Button>
+
                               <br></br>
-                              <Link to={'/success'}>
-                                <Button style={{'AlignSelf':'center'}} variant="success" onClick={clear} >Finalizar</Button>
-                              </Link>   
+ 
+                            </div> 
                         </Form>
                       </Container>
                       {/* <Button onClick={updateOrder}>Actualizar orden</Button> */}
                   </div>
                 </div>
+
                     :
 
                     null
