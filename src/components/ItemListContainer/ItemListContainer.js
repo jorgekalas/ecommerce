@@ -32,7 +32,7 @@ export const ItemListContainer = ({title}) => {
 
         }
         getDataCat();
-    }, [])
+    }, [idCategory])
 
 
 

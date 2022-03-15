@@ -1,3 +1,4 @@
+import React from 'react'
 import './CartContainer.css'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -17,12 +18,12 @@ export const CartContainer = () => {
     const formatMoney = (number) => {
       return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   }
-   
+
     console.log('cart items', cartItems.length)
 
     const sendOrder = async (e) => {
       e.preventDefault();
-      
+
       let order= {
         buyer: {
             name: e.target[0].value,
@@ -35,7 +36,7 @@ export const CartContainer = () => {
     }
 
     console.log('order', order)
-    
+
     const queryCollection = collection(db, 'orders');
 
     try{
@@ -50,6 +51,7 @@ export const CartContainer = () => {
     }
 
     clear();
+
 
   }
 
@@ -71,24 +73,24 @@ return(
 
         {cartItems.length === 0? (
           <div className="carritoVacio">
- 
+
                 <h2>Carrito vacío 😱</h2>
 
               <Link to={`/`}>
                         <Button className="regresar"> Regresar al Home </Button>
               </Link>
-    
+
         </div>
         )
-        
+
 
         :
-  
-        
-        (
-            
 
-             cartItems.map((it) => { 
+
+        (
+
+
+             cartItems.map((it) => {
 
               return (
               <div>
@@ -99,26 +101,26 @@ return(
                       <Link to={`/item/${it.item.id}`}>
                         <Card.Img variant="top" src={it.item.picture} className="imgCartCard"/>
                       </Link>
-                      
-                          <p> 
+
+                          <p>
                                   {it.item.title}  <strong>x {it.amount} u.</strong> = <strong>{formatMoney(it.amount * it.item.price)}</strong>
-                          </p> 
-                                  <Button onClick={() => removeItem(it.item.id)}>Borrar ítem</Button> 
-                                  <Button variant="danger" onClick={clear}>Vaciar carrito</Button> 
-                      
+                          </p>
+                                  <Button onClick={() => removeItem(it.item.id)}>Borrar ítem</Button>
+                                  <Button variant="danger" onClick={clear}>Vaciar carrito</Button>
+
                     </Container>
-                  </div> 
+                  </div>
 
             </div>
                         )
-                      
+
               }
               )
 
-              
+
               )}
 
-              
+
               { cartItems.length > 0?
 
               <div>
@@ -135,13 +137,13 @@ return(
                             <input type="text" placeholder="email" required />
                             <br></br>
                             <div className="buttons">
- 
-                              
+
+
                               <Button type="submit">Enviar</Button>
 
                               <br></br>
- 
-                            </div> 
+
+                            </div>
                         </Form>
                       </Container>
                       {/* <Button onClick={updateOrder}>Actualizar orden</Button> */}
@@ -151,11 +153,11 @@ return(
                     :
 
                     null
-                  
+
               }
 
               {
-                
+
               }
 
 
