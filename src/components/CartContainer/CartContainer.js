@@ -10,12 +10,19 @@ import Form from 'react-bootstrap/Form'
 import {Timestamp, addDoc, collection} from 'firebase/firestore'
 import {db} from '../../utils/firebase'
 import {Success} from '../Success/Success'
+import Swal from "sweetalert2";
+
+
+
 
 export const CartContainer = () => {
 
     const {cartItems, removeItem, clear, precioTotal} = useContext(CartContext);
 
-    const [finishedPurchase, setFinishedPurchase] = useState(false)
+    // const [finishedPurchase, setFinishedPurchase] = useState(false)
+
+
+
 
     const formatMoney = (number) => {
       return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
@@ -24,8 +31,19 @@ export const CartContainer = () => {
     console.log('cart items', cartItems.length)
 
   
-    const finishPurchase = () => {
-          setFinishedPurchase(true);}
+          const enviar=(e) => {
+            e.preventDefault();
+              Swal.fire(
+                  "¡Su compra ha sido exitosa!",
+                  "Se le redireccionará al home"
+               ).finally(() => window.location.href = "/");
+          }
+          
+            
+          
+
+          // const finishPurchase = () => {
+          //   setFinishedPurchase(true);}
 
 
     const sendOrder = async (e) => {
@@ -57,7 +75,8 @@ export const CartContainer = () => {
       console.log('Error: ', error)
     }
 
-    finishPurchase()
+    enviar(e);
+    // finishPurchase()
 
     // clear();
   }
@@ -135,7 +154,7 @@ return(
                             <div className="buttons">
 
 
-                              <Button type="submit" >Enviar</Button>
+                              <Button type="submit">Enviar</Button>
 
                               <br></br>
 
@@ -143,8 +162,8 @@ return(
                         </Form>
                       </Container>
 
-                      {finishedPurchase && <Success></Success>}
-                      
+                      {/* {finishedPurchase && <Success></Success>} */}
+
                   </div>
                 </div>
 

@@ -27,7 +27,7 @@ export const NavBar=() => {
 
             </div>
 
-            <div class="categorias">
+            <div className="categorias">
                 <ul>
                     <Link to={`/category/1`}>Celulares</Link>
                     <Link to={`/category/2`}>SmartTV</Link>
@@ -37,7 +37,7 @@ export const NavBar=() => {
                 </ul>
             </div>
 
-            <div class="carrito">
+            <div className="carrito">
                 <Link to={"/cart"}>
                     <CartWidget/>
                 </Link>
