@@ -4,14 +4,23 @@ This project has been made as the final proof of work of the React Coder House's
 
 # Technologies
 
-This project has been made from scratch, by using HTML, CSS, Javascript, React, React-Bootstrap, NodeJS, and GitHub. The main focus is React.
+This project has been made from scratch, by using HTML, CSS, Javascript, React, Firebase, React-Router DOM, React-Bootstrap, NodeJS, and GitHub. The main focus is React.
+
+Main dependences:
+
+- [React JS](https://reactjs.org/)
+- [Bootstrap React](https://react-bootstrap.github.io/)
+- [Font Awesome Icon](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
+- [Firebase](https://firebase.google.com/)
+- [React Router DOM](https://v5.reactrouter.com/web/guides/quick-start)
+- [Sweet Alert 2](https://sweetalert2.github.io/)
 
 # Launch
 
 There's no hardware requirements to lunch this project. It's only needed a good internet connection and a modern browser, like Google Chrome, Mozilla Firefox, Brave, Edge, and so on.
 Besides, it can be run locally by installing NodeJs and React in your PC.
 
-<!-- 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -81,4 +90,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
