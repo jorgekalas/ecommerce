@@ -9,7 +9,6 @@ import {Link} from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import {Timestamp, addDoc, collection} from 'firebase/firestore'
 import {db} from '../../utils/firebase'
-import {Success} from '../Success/Success'
 import Swal from "sweetalert2";
 
 
@@ -161,8 +160,6 @@ return(
                             </div>
                         </Form>
                       </Container>
-
-                      {/* {finishedPurchase && <Success></Success>} */}
 
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailCo
 import {Footer} from './components/Footer/Footer'
 import {CartProvider} from './context/CartContext'
 import {CartContainer} from './components/CartContainer/CartContainer'
-import {Success} from './components/Success/Success'
+
 
 
 
@@ -23,7 +23,6 @@ function App() {
             <Route path="/category/:idCategory" element={<Home/>}/>
             <Route path="/item/:id" element={<ItemDetailContainer/>}/>
             <Route path="/cart" element={<CartContainer/>}/>
-            <Route path="/success" element={<Success/>}/>
 
           </Routes>
           <Footer/>
