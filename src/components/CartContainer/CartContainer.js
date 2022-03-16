@@ -4,22 +4,29 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import {CartContext} from '../../context/CartContext'
-import {useContext} from 'react'
+import {useContext, useState} from 'react'
 import {Link} from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
-import {Timestamp, addDoc, collection, doc, updateDoc} from 'firebase/firestore'
+import {Timestamp, addDoc, collection} from 'firebase/firestore'
 import {db} from '../../utils/firebase'
 import {Success} from '../Success/Success'
 
 export const CartContainer = () => {
 
-    const {cartItems, removeItem, clear, precioTotal, showFinalizar} = useContext(CartContext);
+    const {cartItems, removeItem, clear, precioTotal} = useContext(CartContext);
+
+    const [finishedPurchase, setFinishedPurchase] = useState(false)
 
     const formatMoney = (number) => {
       return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   }
 
     console.log('cart items', cartItems.length)
+
+  
+    const finishPurchase = () => {
+          setFinishedPurchase(true);}
+
 
     const sendOrder = async (e) => {
       e.preventDefault();
@@ -50,21 +57,10 @@ export const CartContainer = () => {
       console.log('Error: ', error)
     }
 
-    clear();
+    finishPurchase()
 
-
+    // clear();
   }
-
-    // const updateOrder = async() => {
-    // const queryDoc = doc(db, 'orders', 'iCWw1oixRNAWl8RVGBuC');
-    // await updateDoc(queryDoc, {
-    //   buyer: {
-    //     name: "Pedro"
-    //   }
-    // })
-    // }
-
-
 
 
 return(
@@ -139,14 +135,16 @@ return(
                             <div className="buttons">
 
 
-                              <Button type="submit">Enviar</Button>
+                              <Button type="submit" >Enviar</Button>
 
                               <br></br>
 
                             </div>
                         </Form>
                       </Container>
-                      {/* <Button onClick={updateOrder}>Actualizar orden</Button> */}
+
+                      {finishedPurchase && <Success></Success>}
+                      
                   </div>
                 </div>
 

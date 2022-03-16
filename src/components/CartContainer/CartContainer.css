@@ -31,12 +31,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 50vh;
+    height: 62vh;
 }
 
 .carritoVacio h2{
     font-size:50px;
-    padding: 40px;
+    padding: 70px;
 }
 
 .carritoVacio button{

@@ -14,7 +14,7 @@ export const ItemDetail = ({item}) => {
     const currentItem = item
 
 
-    const {addItem, cartItems} = useContext(CartContext);
+    const {addItem, cartItems, isInCart} = useContext(CartContext);
     
     const formatMoney = (number) => {
         return "$ " + number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
@@ -52,7 +52,7 @@ console.log('cart items', cartItems)
                         <Card.Text>{currentItem.description}</Card.Text>
                         <Card.Text style={{fontWeight: 'bold', fontSize: '20px'}}>{formatMoney(currentItem.price)}</Card.Text>
                         
-                        {!cartItems.length>0 ?(
+                        {!isInCart(currentItem.id)?(
                         <div>
                         
                         <ItemCount 

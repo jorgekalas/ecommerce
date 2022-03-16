@@ -1,7 +1,7 @@
 import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
 import {ItemList} from '../ItemList/ItemList'
-// import {Productos} from '../../data/data'
+// import {Productos} from '../../data/data' //Utilizado en caso de no emplear FireBase
 import {useParams} from 'react-router-dom'
 import {Loader} from '../Loader/Loader'
 import {collection, getDocs} from "firebase/firestore";
@@ -36,6 +36,7 @@ export const ItemListContainer = ({title}) => {
 
 
 
+//Utilizado en caso de no emplear FireBase
 
 // const [products, setProducts] = useState([])
 // const {idCategory} = useParams();

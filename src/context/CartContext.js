@@ -1,8 +1,5 @@
 
 import React, {createContext, useState, useContext} from 'react';
-import {Link} from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
-
 
 
 
@@ -65,8 +62,14 @@ export const CartProvider = ({children}) =>{
     }
 
     const isInCart = (itemId)=>{
-        return cartItems.find(product => product.item.id === itemId)
-
+        let result = cartItems.find(product => product.item.id === itemId)
+        if(result == undefined){
+            result = false;
+        } else{
+            result = true;
+        }
+        // console.log('isAlreadyInCart', result)
+        return result
     }
 
     const precioTotal=() => {
@@ -77,17 +80,7 @@ export const CartProvider = ({children}) =>{
       }
 
 
-      const showFinalizar=() => {
-                return(
-                <div>
-                  <Link to={'/success'}>
-                  <Button variant="success" onClick={clear}>Finalizar</Button>
-                </Link> 
-                </div>
-                )
-
-                
-      }
+    
 
 
 
@@ -102,8 +95,7 @@ return(
         isInCart, 
         cartCounter,
         modifyCartQuantity ,
-        precioTotal,
-        showFinalizar
+        precioTotal
         }}>
         {children}
     </CartContext.Provider>
