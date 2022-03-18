@@ -30,13 +30,7 @@ export const CartContainer = () => {
     console.log('cart items', cartItems.length)
 
   
-          const enviar=(e) => {
-            e.preventDefault();
-              Swal.fire(
-                  "¡Su compra ha sido exitosa!",
-                  "Se le redireccionará al home"
-               ).finally(() => window.location.href = "/");
-          }
+
           
             
           
@@ -63,21 +57,26 @@ export const CartContainer = () => {
 
     const queryCollection = collection(db, 'orders');
 
-    try{
-
     const docRef = await addDoc(queryCollection, order)
+
+    const orderNumber = docRef.id;
 
     console.log('docRef', docRef.id)
 
-    } catch(error){
+    const enviar=(e) => {
+      e.preventDefault();
 
-      console.log('Error: ', error)
-    }
+      Swal.fire(
+        "¡Su compra ha sido exitosa!",
+        "N° de orden: " + orderNumber,
+        "Se le redireccionará al home"
+        ).finally(() => window.location.href = "/");
+      }
 
-    enviar(e);
-    // finishPurchase()
 
-    // clear();
+      enviar(e);
+    
+
   }
 
 
